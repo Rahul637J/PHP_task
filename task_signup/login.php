@@ -45,30 +45,54 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
 	<style type="text/css">
 	
-	#text{
+	body{
+		margin-top: 100px;
+		display: flex;
+		flex-direction: column;
+		background-color: maroon;
+		gap: 50px;
+		align-items: center;
+		justify-content: center;
+	}	
 
-		height: 25px;
+	div{
+		font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+
+	}
+
+	#login{
+		text-decoration: none;
+		color: wheat;
+	}
+	
+	#text{
+		height: 35px;
 		border-radius: 5px;
+		font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 		padding: 4px;
 		border: solid thin #aaa;
+		outline:none;
 		width: 100%;
 	}
 
 	#button{
 		padding: 10px;
-		width: 100px;
+		width: 100%;
+		height: 35px;
 		color: white;
 		background-color: lightblue;
+		font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+		border-radius: 10px;
 		border: none;
 	}
 
 	#box{
-		background-color: grey;
+		background-color: darkseagreen;
 		margin: auto;
 		width: 300px;
 		padding: 20px;
-	}
-
+		border-radius: 10px;
+	}	
 	</style>
 
 	<div id="box">
@@ -76,12 +100,12 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 		<form method="post">
 			<div style="font-size: 20px;margin: 10px;color: white;">Login</div>
 
-			<input id="text" type="text" name="user_name"><br><br>
-			<input id="text" type="password" name="password"><br><br>
+			<input id="text" type="text" name="user_name" placeholder="email" required><br><br>
+			<input id="text" type="password" name="password" placeholder="password" required><br><br>
 
 			<input id="button" type="submit" value="Login"><br><br>
 
-			<a href="signup.php">Click to Signup</a><br><br>
+			<h4>Not registered ?</h4><a href="signup.php" id="login">Click to Signup</a><br><br>
 		</form>
 	</div>
 </body>

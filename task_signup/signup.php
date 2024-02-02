@@ -40,29 +40,52 @@ session_start();
 <body>
 
 	<style type="text/css">
+	body{
+		margin-top: 100px;
+		display: flex;
+		flex-direction: column;
+		background-color: maroon;
+		gap: 50px;
+		align-items: center;
+		justify-content: center;
+	}	
+	div{
+		font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+		width: fit-content;
+	}
+	#login{
+		text-decoration: none;
+		color: wheat;
+		/* border: 2px solid; */
+	}
 	
 	#text{
-
-		height: 25px;
+		height: 35px;
 		border-radius: 5px;
+		font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 		padding: 4px;
 		border: solid thin #aaa;
+		outline:none;
 		width: 100%;
 	}
 
 	#button{
 		padding: 10px;
-		width: 100px;
+		width: 100%;
 		color: white;
 		background-color: lightblue;
+		font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+		border-radius: 10px;
 		border: none;
+		
 	}
 
 	#box{
-		background-color: grey;
+		background-color: darkseagreen;
 		margin: auto;
 		width: 300px;
 		padding: 20px;
+		border-radius: 10px;
 	}
 
 	</style>
@@ -71,14 +94,14 @@ session_start();
 		
 		<form method="post">
 			<div style="font-size: 20px;margin: 10px;color: white;">Signup</div>
-            <label>Email: </label><input id="text" type="text" name="user_name"><br><br>
-			<label>Password: </label><input id="text" type="password" name="password"><br><br>
-			<label>Address: </label><input id="text" type="text" name="address"><br><br>
-			<label>Phone NO: </label><input id="text" type="text" name="phone_no"><br><br>
+            <input id="text" type="text" name="user_name" placeholder="email"><br><br>
+			 <input id="text" type="password" name="password" placeholder="password"><br><br>
+			 <input id="text" type="text" name="address" placeholder="address"><br><br>
+			 <input id="text" type="text" name="phone_no" placeholder="phone no"><br><br>
 
-			<input id="button" type="submit" value="Signup"><br><br>
+			<input id="button" type="submit" value="Signup"><br>
 
-			<a href="login.php">Click to Login</a><br><br>
+			<h4>Already have an account ?</h4><a href="login.php" id="login">Click to Login</a><br>
 		</form>
 	</div>
 </body>
